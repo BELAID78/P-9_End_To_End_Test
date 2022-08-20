@@ -1,0 +1,20 @@
+{
+  "name": "p-9_end_to_end_test",
+  "version": "1.0.0",
+  "description": "use night watch to test our bill front end application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BELAID78/P-9_End_To_End_Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BELAID78/P-9_End_To_End_Test/issues"
+  },
+  "homepage": "https://github.com/BELAID78/P-9_End_To_End_Test#readme"
+}
