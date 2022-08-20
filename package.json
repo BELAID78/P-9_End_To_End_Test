@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BELAID78/P-9_End_To_End_Test/issues"
   },
-  "homepage": "https://github.com/BELAID78/P-9_End_To_End_Test#readme"
+  "homepage": "https://github.com/BELAID78/P-9_End_To_End_Test#readme",
+  "dependencies": {
+    "nightwatch": "^2.3.3"
+  }
 }
