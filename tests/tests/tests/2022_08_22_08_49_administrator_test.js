@@ -27,4 +27,27 @@ describe('Je suis connecté en tant qu’administrateur', function() {
             .end();
         })
     })
+
+    describe('je clique sur un ticket en attente, Je clique sur le champ commentaire', function() {
+        it('Je peux insérer un commentaire', function(browser) {
+            browser
+            .click('[data-testid="arrow-icon1"]')
+            .click('div#open-billd7vVuoPrxhBZog2Nya6oCW')
+            .execute(function() {
+                let haveAcceptButton = document.querySelector('[data-testid="dashboard-form"] #btn-accept-bill') !== null
+                return haveAcceptButton
+            }, [], function(result){
+                browser.verify.equal(result.value, true)
+            })
+            .click('[data-testid="commentary2"]')
+            .setValue('[data-testid="commentary2"]', 'un test commentaire')
+            .execute(function() {
+                return document.querySelector('[data-testid="commentary2"]').value
+            }, [], function(result) {
+                browser.verify.equal(result.value, 'un test commentaire')
+            })
+            .pause(1000)
+            .end();
+        })
+    });
 })
