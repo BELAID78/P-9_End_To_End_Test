@@ -33,4 +33,23 @@ describe('Je suis un visiteur non connecté', function() {
       .end();
     })
   })
+
+  describe('Je remplis le champ e-mail du login administrateur au bon format, le champ password du login administrateur et je clique sur le bouton se connecter', function() {
+    it('Je suis envoyé sur la page Dashboard', function(browser) {
+      browser
+      .url('http://127.0.0.1:8080/')
+      .waitForElementVisible('body')
+      .setValue('input[data-testid="admin-email-input"]', 'admin@test.tld')
+      .setValue('input[data-testid="admin-password-input"]', 'admin')
+      .click('button[data-testid="admin-login-button"]')
+      .waitForElementVisible('.dashboard-content')
+      .url(function(result) {
+        let areInDashboardPage = result.value.indexOf('admin/dashboard') > -1;
+
+        browser.verify.equal(areInDashboardPage, true)
+      })
+      .pause(1000)
+      .end();
+    })
+  })
 });
